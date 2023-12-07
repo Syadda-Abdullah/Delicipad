@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="{{asset('') }}assets/login.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('') }}assets/css/login.css">
 </head>
 <body>
     <div class="login-container">
