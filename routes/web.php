@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\TransaksiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,18 +22,22 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('pages/register');
 });
-Route::get('/menu', function () {
-    return view('pages/menu');
+Route::get('/menu', [MenuController::class,'index']);
+
+Route::get('/coba', function () {
+    return view('coba');
 });
-Route::get('/cart', function () {
-    return view('pages/cart');
+Route::get('/cart', [TransaksiController::class,'index']);
+
+Route::get('/coba2', function () {
+    return view('coba2');
 });
 Route::get('/payment', function () {
     return view('pages/payment');
 });
 Route::get('/delivery', function () {
-    return view('pages/delivery');
+    return view('delivery');
 });
-Route::get('/admin', function () {
-    return view('pages/admin');
+Route::get('/home', function () {
+    return view('home');
 });
