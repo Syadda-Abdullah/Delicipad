@@ -12,28 +12,27 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/home');
 });
 Route::get('/login', function () {
-    return view('/pages/login');
+    return view('pages/login');
+});
+Route::get('/register', function () {
+    return view('pages/register');
 });
 Route::get('/menu', function () {
-    return view('menu');
-});
-Route::get('/coba', function () {
-    return view('coba');
+    return view('pages/menu');
 });
 Route::get('/cart', function () {
-    return view('cart');
-});
-Route::get('/coba2', function () {
-    return view('coba2');
+    return view('pages/cart');
 });
 Route::get('/payment', function () {
-    return view('payment');
+    return view('pages/payment');
 });
 Route::get('/delivery', function () {
-    return view('delivery');
+    return view('pages/delivery');
+});
+Route::get('/admin', function () {
+    return view('pages/admin');
 });
