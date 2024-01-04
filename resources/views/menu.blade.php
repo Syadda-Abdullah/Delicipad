@@ -43,7 +43,7 @@
     }
   </style>
 </head>
-<body id="body">
+<body id="body" class='bg-slate-800'>
 
 <!-- component -->
 <nav class="flex dark:bg-slate-900 items-center relative justify-between bg-white px-5 py-6 w-full">
@@ -104,29 +104,97 @@
 </nav>
 
 
-<div class="bg-white">
+<div class="bg-[url('/img/bgimg.jpg')]">
   <div class=' mt-10 body'>
     <swiper-container class="mySwiper" pagination="true" autoplay='true'>
       <swiper-slide><img src="img/baner.jpg" alt=""><p class='absolute text-2xl font-extrabold text-white'>PROMO</p></swiper-slide>
       <swiper-slide><img src="img/1339.jpg" alt=""></swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-      <swiper-slide>Slide 6</swiper-slide>
-      <swiper-slide>Slide 7</swiper-slide>
-      <swiper-slide>Slide 8</swiper-slide>
-      <swiper-slide>Slide 9</swiper-slide>
+      <swiper-slide><img src="img/baner3.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="img/baner4.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="img/baner5.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="img/baner6.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="img/baner7.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="img/baner8.jpg" alt=""></swiper-slide>
+      <swiper-slide><img src="img/baner9.jpg" alt=""></swiper-slide>
     </swiper-container>
   
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </div>
   <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
     <div>
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 flex justify-center ">DAFTAR MENU</h2>
+      <h2 class="text-2xl font-bold tracking-tight text-white flex justify-center ">DAFTAR MENU</h2>
+    </div>
+    <div class='mt-3 flex justify-center gap-x-4 mx-auto'>
+      <button class="button2">
+        <span class="relative z-10">KERANJANG</span>
+      </button>
+      <div class='container p-4 mx-auto bg-white rounded-lg '>
+        <div class='flex gap-x-5'>
+          <h1 class='font-mono'>Kategori</h1>
+          <div class='flex gap-x-5'>
+            <div class='rounded-xl flex flex-col justify-between relative bg-gray-800 '>
+              <input type="checkbox" id="cb4" value="cb4"
+              class='
+              absolute appearance-none h-4 w-10 bg-gray-400 rounded-full -mt-2
+                  checked:bg-yellow-300 checked:shadow-[0_0px_5px_yellow]
+                  transition-all duration-300 peer '/>
+              <label for='cb4' class='w-24 rounded-full p-1 flex flex-row justify-center px-2 peer-checked:text-yellow-300 select-none text-white'>Foods</label>
+          </div>
+            <div class='rounded-xl flex flex-col justify-between relative bg-gray-800 '>
+              <input type="checkbox" id="cb5" value="cb5"
+              class='
+              absolute appearance-none h-4 w-10 bg-gray-400 rounded-full -mt-2
+                  checked:bg-blue-500 checked:shadow-[0_0px_5px_blue]
+                  transition-all duration-300 peer '/>
+              <label for='cb5' class='w-24 rounded-full p-1 flex flex-row justify-center px-2 peer-checked:text-blue-500 select-none text-white'>Drinks</label>
+          </div>
+          <div class='rounded-xl flex flex-col justify-between relative bg-gray-800 '>
+            <input type="checkbox" id="cb6" value="cb6"
+            class='
+            absolute appearance-none h-4 w-10 bg-gray-400 rounded-full -mt-2
+                checked:bg-red-500 checked:shadow-[0_0px_5px_red]
+                transition-all duration-300 peer '/>
+            <label for='cb6' class='w-24 rounded-full p-1 flex flex-row justify-center px-2 peer-checked:text-red-500 select-none text-white'>Snack</label>
+        </div>
+        <div class='rounded-xl flex flex-col justify-between relative bg-gray-800 '>
+          <input type="checkbox" id="cb7" value="cb7"
+          class='
+          absolute appearance-none h-4 w-10 bg-gray-400 rounded-full -mt-2
+              checked:bg-green-500 checked:shadow-[0_0px_5px_green]
+              transition-all duration-300 peer '/>
+          <label for='cb7' class='w-32 rounded-full p-1 flex flex-row justify-center px-2 peer-checked:text-green-500 select-none text-white'>Vegetables</label>
+      </div>
+      <div class='rounded-xl flex flex-col justify-between relative bg-gray-800 '>
+        <input type="checkbox" id="cb8" value="cb8"
+        class='
+        absolute appearance-none h-4 w-10 bg-gray-400 rounded-full -mt-2
+            checked:bg-pink-500 checked:shadow-[0_0px_5px_pink]
+            transition-all duration-300 peer '/>
+        <label for='cb8' class='w-28 rounded-full p-1 flex flex-row justify-center px-2 peer-checked:text-pink-500 select-none text-white'>Desserts</label>
+    </div>
+    <div class='rounded-xl flex flex-col justify-between relative bg-gray-800 '>
+      <input type="checkbox" id="cb9" value="cb9"
+      class='
+      absolute appearance-none h-4 w-10 bg-gray-400 rounded-full -mt-2
+          checked:bg-teal-400 checked:shadow-[0_0px_5px_teal]
+          transition-all duration-300 peer '/>
+      <label for='cb9' class='w-44 rounded-full p-1 flex flex-row justify-center px-2 peer-checked:text-teal-400 select-none text-white'>Internasional Foods</label>
+  </div>
+  <div class='rounded-xl flex flex-col justify-between relative bg-gray-800 '>
+    <input type="checkbox" id="cb10" value="cb10"
+    class='
+    absolute appearance-none h-4 w-10 bg-gray-400 rounded-full -mt-2
+        checked:bg-purple-500 checked:shadow-[0_0px_5px_purple]
+        transition-all duration-300 peer '/>
+    <label for='cb10' class='w-20 rounded-full p-1 flex flex-row justify-center px-2 peer-checked:text-purple-500 select-none text-white'>Other</label>
+  </div>
+        </div>
+      </div>
     </div>
   </div>
-  
-  @include("layout.card")
+  <div class='mt-8 w-[90vw] mx-auto flex flex-wrap bg-yellow-500'>
+    @include("layout.card")
+  </div>
   {{-- <div class="container px-8 mx-auto max-w-96 mb-10 ">
     <div class= "rounded-lg shadow-lg p-10 bg-slate-100" >
       <div>
@@ -147,8 +215,7 @@
       </div>
     </div>
 </div> --}}
-
-
+  </div>
 </div>
 
 
@@ -170,5 +237,13 @@
     }
   };
 
-  
+// untuk chekbox =================
+
+// const childs = document.querySelectorAll('input');
+// for(let i =0;i<childs.length;i++){
+//     window.setTimeout(function(){
+//         childs[i].checked = true; 
+//     },(i+1)*500);
+// }
+// =========================================
 </script>
