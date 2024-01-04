@@ -19,3 +19,21 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('/pages/login');
 });
+Route::get('/menu', function () {
+    return view('menu');
+});
+Route::get('/coba', function () {
+    return view('coba');
+});
+Route::get('/cart', function () {
+    return view('cart');
+});
+Route::get('/coba2', function () {
+    return view('coba2');
+});
+Route::get('/payment', function () {
+    return view('payment');
+});
+Route::get('/delivery', function () {
+    return view('delivery');
+});
