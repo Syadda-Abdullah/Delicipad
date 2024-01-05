@@ -7,7 +7,30 @@
     <title>Document</title>
     @vite('resources/css/app.css')
 </head>
-<body class='bg-slate-900'>
+<body class='bg-white'>
+
+<nav>
+<div class="w-screen h-20 p-5 bg-white shadow flex justify-center gap-5 items-center">
+    <div class="w-10 h-10 bg-white bg-opacity-10 rounded-[100px]" >
+        <img src="img/delicipad.jpg" alt="">
+    </div>
+    <div class="grow shrink basis-0 text-black text-[28px] font-medium font-['Roboto'] leading-9">Delicipad</div>
+    <div class="bg-white justify-center items-center gap-10 flex">
+        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</div>
+        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</div>
+        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Order Food</div>
+        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</div>
+        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Reviews</div>
+        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</div>
+        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Contact/Help</div>
+        <div class="h-9 p-2 rounded-md border border-black border-opacity-10 justify-end items-center gap-1 flex">
+            <div class="grow shrink basis-0 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Search in site</div>
+            <div class="w-5 h-5 relative" ></div>
+        </div>
+    </div>
+    
+</div>
+</nav>
 
 <div class=''>
   <div class='container mt-10 px-8 mx-auto max-w-xl rounded-lg shadow-lg p-10 bg-white min-h-60'>

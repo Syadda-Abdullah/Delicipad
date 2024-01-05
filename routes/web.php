@@ -16,6 +16,9 @@ use App\Http\Controllers\TransaksiController;
 Route::get('/', function () {
     return view('pages/home');
 });
+Route::get('/admin', function () {
+    return view('pages/admin');
+});
 Route::get('/login', function () {
     return view('pages/login');
 });
@@ -24,20 +27,11 @@ Route::get('/register', function () {
 });
 Route::get('/menu', [MenuController::class,'index']);
 
-Route::get('/coba', function () {
-    return view('coba');
-});
 Route::get('/cart', [TransaksiController::class,'index']);
 
-Route::get('/coba2', function () {
-    return view('coba2');
-});
 Route::get('/payment', function () {
     return view('pages/payment');
 });
 Route::get('/delivery', function () {
-    return view('delivery');
-});
-Route::get('/home', function () {
-    return view('home');
+    return view('pages/delivery');
 });
