@@ -19,3 +19,10 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('/pages/login');
 });
+
+Route::get('/ulasan', function () {
+    return view('ulasan');
+});
+Route::get('/userpage', function () {
+    return view('userpage');
+});
