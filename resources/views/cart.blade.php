@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
     @vite('resources/css/app.css')
 </head>
@@ -16,16 +19,14 @@
     </div>
     <div class="grow shrink basis-0 text-black text-[28px] font-medium font-['Roboto'] leading-9">Delicipad</div>
     <div class="bg-white justify-center items-center gap-10 flex">
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Order Food</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Reviews</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Contact/Help</div>
-        <div class="h-9 p-2 rounded-md border border-black border-opacity-10 justify-end items-center gap-1 flex">
-            <div class="grow shrink basis-0 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Search in site</div>
-            <div class="w-5 h-5 relative" ></div>
+        <a href='/' class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</a>
+        <a href='/menu' class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</a>
+        <a href='/cart' class="text-black text-base font-normal font-['Roboto'] leading-normal">Cart</a>
+        <a href='/payment' class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</a>
+        <a href='/profile' class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</a>
+        <div class="relative h-9 rounded-md border border-black border-opacity-30 justify-end items-center gap-1 flex">
+            <input type='text' placeholder='Search in site' class="pl-2 relative flex w-full h-8 rounded-md text-black border-0 ring-0 outline-0 text-opacity-1 text-sm font-normal font-['Roboto'] leading-tight">
+            <button type='submit' style="background-image: url('/img/search.png'); background-size: contain; background-position:center; background-repeat:no-repeat;" alt='se' class="relative w-7 h-7 relative z-2 mr-2" ></button>
         </div>
     </div>
     

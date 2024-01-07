@@ -33,7 +33,7 @@ Route::get('/menu', [MenuController::class,'index']);
 Route::get('/cart', [TransaksiController::class,'index']);
 
 Route::get('/payment', function () {
-    return view('pages/payment');
+    return view('pages/delivery2');
 });
 Route::get('/delivery', function () {
     return view('pages/delivery');

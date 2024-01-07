@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     @vite('resources/css/app.css')
     <title>Profile</title>
 </head>
@@ -20,9 +23,9 @@
         <a href='/cart' class="text-black text-base font-normal font-['Roboto'] leading-normal">Cart</a>
         <a href='/payment' class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</a>
         <a href='/profile' class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</a>
-        <div class="h-9 p-2 rounded-md border border-black border-opacity-10 justify-end items-center gap-1 flex">
-            <div class="grow shrink basis-0 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Search in site</div>
-            <div class="w-5 h-5 relative" ></div>
+        <div class="relative h-9 rounded-md border border-black border-opacity-30 justify-end items-center gap-1 flex">
+            <input type='text' placeholder='Search in site' class="pl-2 relative flex w-full h-8 rounded-md text-black border-0 ring-0 outline-0 text-opacity-1 text-sm font-normal font-['Roboto'] leading-tight">
+            <button type='submit' style="background-image: url('/img/search.png'); background-size: contain; background-position:center; background-repeat:no-repeat;" alt='se' class="relative w-7 h-7 relative z-2 mr-2" ></button>
         </div>
     </div>
     
@@ -59,33 +62,42 @@
 </div>
 
 <!--Form-->
-<div class="w-screen h-[552px] px-[170px] py-[60px] justify-center items-center gap-[60px] inline-flex">
-    <div class="grow shrink basis-0 flex-col justify-start items-center gap-6 inline-flex">
+<div class="w-screen h-[552px] py-[60px] justify-center items-center gap-[60px] inline-flex">
+    <div class="w-500px flex-col justify-center items-center gap-6 inline-flex">
         <div class="w-[520px] text-center text-black text-[40px] font-bold font-['Roboto'] leading-[48px]">Personal Information</div>
-        <div class="h-20 flex-col justify-center items-start gap-1 flex">
-            <div class="self-stretch text-black text-sm font-medium font-['Roboto'] leading-tight">Username</div>
-            <div class="self-stretch px-3 py-2 bg-white rounded-md border border-black border-opacity-10 justify-start items-center gap-1 inline-flex">
-                <div class="grow shrink basis-0 h-5 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Enter your username</div>
+        <div class='justify-start w-full gap-6  flex-col inline-flex'>
+            <div class="relative w-full h-18 flex-col justify-flex-start items-start gap-1 flex">
+                <div class="self-stretch text-black text-16 font-bold font-['Roboto'] leading-tight">Username</div>
+                <div class="relative w-full h-8 py-0 bg-white rounded-md justify-start items-center gap-1 inline-flex">
+                    <input type='text' placeholder='Enter your username' class="relative w-full h-8 px-2 border border-1 border-black rounded-md border-opacity-30 text-black text-opacity-1 text-sm font-normal font-['Roboto'] leading-tight">
+                </div>
+                <div class="self-stretch text-black text-opacity-50 text-xs font-normal font-['Roboto'] leading-none">Your username will be displayed publicly</div>
             </div>
-            <div class="self-stretch text-black text-opacity-50 text-xs font-normal font-['Roboto'] leading-none">Your username will be displayed publicly</div>
-        </div>
-        <div class="h-20 flex-col justify-center items-start gap-1 flex">
-            <div class="self-stretch text-black text-sm font-medium font-['Roboto'] leading-tight">Profile Picture</div>
-            <div class="self-stretch px-3 py-2 bg-white rounded-md border border-black border-opacity-10" ></div>
-            <div class="self-stretch text-black text-opacity-50 text-xs font-normal font-['Roboto'] leading-none">Upload a profile picture</div>
-        </div>
-        <div class="h-20 flex-col justify-center items-start gap-1 flex">
-            <div class="self-stretch text-black text-sm font-medium font-['Roboto'] leading-tight">Location</div>
-            <div class="self-stretch px-3 py-2 bg-white rounded-md border border-black border-opacity-10 justify-start items-center gap-1 inline-flex">
-                <div class="grow shrink basis-0 h-5 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Enter your location</div>
+            <div class="h-18 flex-col justify-center items-start gap-1 flex">
+                <div class="self-stretch text-black text-16 font-bold font-['Roboto'] leading-tight">Profile Picture</div>
+                <input type='file' class="self-stretch bg-white">
+                <div class="self-stretch text-black text-opacity-50 text-xs font-normal font-['Roboto'] leading-none">Upload a profile picture</div>
             </div>
-            <div class="self-stretch text-black text-opacity-50 text-xs font-normal font-['Roboto'] leading-none">Your location will be used to personalize your experience</div>
-        </div>
-        <div class="flex-col justify-start items-start gap-3 flex">
-            <div class="h-12 p-3 bg-black rounded-lg flex-col justify-center items-center flex">
-                <div class="text-white text-base font-medium font-['Roboto'] leading-normal">Save Changes</div>
+            <div class="h-18 flex-col justify-center items-start gap-1 flex">
+                <div class="self-stretch text-black text-16 font-bold font-['Roboto'] leading-tight">Location</div>
+                <div class="relative w-full h-8 py-0 bg-white rounded-md justify-start items-center gap-1 inline-flex">
+                    <input type='text' placeholder='Enter your location' class="relative w-full h-8 px-2 border border-1 border-black rounded-md border-opacity-30 text-black text-opacity-1 text-sm font-normal font-['Roboto'] leading-tight">
+                </div>
+                <div class="self-stretch text-black text-opacity-50 text-xs font-normal font-['Roboto'] leading-none">Your location will be used to personalize your experience</div>
+            </div>
+            <div class="h-20 flex-col justify-center items-start gap-1 flex">
+                <div class="self-stretch text-black text-16 font-bold font-['Roboto'] leading-tight">Phone Number</div>
+                <div class="relative w-full h-8 py-0 bg-white rounded-md justify-start items-center gap-1 inline-flex">
+                    <input type='text' placeholder='Enter your phone number' class="relative w-full h-8 px-2 border border-1 border-black rounded-md border-opacity-30 text-black text-opacity-1 text-sm font-normal font-['Roboto'] leading-tight">
+                </div>
+                <div class="self-stretch text-black text-opacity-50 text-xs font-normal font-['Roboto'] leading-none">Your phone number will be used to contact you</div>
             </div>
         </div>
+            <div class="flex-col justify-start items-start gap-3 flex">
+                <div class="h-12 p-3 bg-black rounded-lg flex-col justify-center items-center flex">
+                    <button type='submit' class="text-white text-base font-medium font-['Roboto'] leading-normal">Save Changes</button>
+                </div>
+            </div>
     </div>
 </div>
 
