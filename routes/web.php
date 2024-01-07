@@ -18,8 +18,16 @@ Route::get('/', function () {
 });
 Route::get('/admin', function () {
     return view('pages/admin');
+    return view('pages/home');
+});
+Route::get('/admin', function () {
+    return view('pages/admin');
 });
 Route::get('/login', function () {
+    return view('pages/login');
+});
+Route::get('/register', function () {
+    return view('pages/register');
     return view('pages/login');
 });
 Route::get('/register', function () {
@@ -39,7 +47,8 @@ Route::get('/delivery2', function () {
     return view('pages/delivery2');
 });
 Route::post('/pesan',[TransaksiController::class,'pesan']);
+Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
 
-Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
+// Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
 
-Route::put('/transaksi/{id}', [TransaksiController::class, 'update'])->name('transaksi.update');
+// Route::put('/transaksi/{id}', [TransaksiController::class, 'update'])->name('transaksi.update');
