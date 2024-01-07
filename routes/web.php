@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 Route::get('/admin', function () {
     return view('pages/admin');
-    return view('pages/home');
 });
 Route::get('/admin', function () {
     return view('pages/admin');
@@ -28,7 +27,6 @@ Route::get('/login', function () {
 });
 Route::get('/register', function () {
     return view('pages/register');
-    return view('pages/login');
 });
 Route::get('/register', function () {
     return view('pages/register');
