@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\TransaksiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,17 +13,40 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/home');
+});
+Route::get('/admin', function () {
+    return view('pages/admin');
+});
+Route::get('/admin', function () {
+    return view('pages/admin');
 });
 Route::get('/login', function () {
-    return view('/pages/login');
+    return view('pages/login');
 });
+Route::get('/register', function () {
+    return view('pages/register');
+});
+Route::get('/register', function () {
+    return view('pages/register');
+});
+Route::get('/menu', [MenuController::class,'index']);
 
-Route::get('/ulasan', function () {
-    return view('ulasan');
+Route::get('/cart', [TransaksiController::class,'index']);
+
+Route::get('/payment', function () {
+    return view('pages/payment');
 });
-Route::get('/userpage', function () {
-    return view('userpage');
+Route::get('/delivery', function () {
+    return view('pages/delivery');
 });
+Route::get('/delivery2', function () {
+    return view('pages/delivery2');
+});
+Route::post('/pesan',[TransaksiController::class,'pesan']);
+Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
+
+// Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
+
+// Route::put('/transaksi/{id}', [TransaksiController::class, 'update'])->name('transaksi.update');
