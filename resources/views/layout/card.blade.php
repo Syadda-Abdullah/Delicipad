@@ -1,6 +1,6 @@
 
 @forelse ($data as $item)
-<div class="container px-8 max-w-96 mb-10 bg-green-500 ">
+<div class="container px-8 max-w-96 mb-10  ">
     <div class= "rounded-lg shadow-lg p-10 bg-white" >
       <div>
         <img src="img/{{$item['foto']}}" alt="" class="rounded-lg ">

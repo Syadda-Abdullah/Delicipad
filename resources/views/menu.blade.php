@@ -192,7 +192,7 @@
       </div>
     </div>
   </div>
-  <div class='mt-8 w-[90vw] mx-auto flex flex-wrap bg-yellow-500'>
+  <div class='mt-8 w-[90vw] mx-auto flex flex-wrap '>
     @include("layout.card")
   </div>
   {{-- <div class="container px-8 mx-auto max-w-96 mb-10 ">
