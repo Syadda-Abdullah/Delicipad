@@ -85,16 +85,24 @@
     </swiper-container>
   
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  
   </div>
+  <div class='flex gap-x-20'>
+    <img src="img/restorant.jpg" alt="" class='max-w-lg mt-8 rounded-r-full shadow-xl'>
+    <div class='mt-20 w-[500px] h-[200px] rounded-xl bg-slate-100 shadow-xl '>
+      <h1 class='font-mono p-5'> Selamat datang di dunia cita rasa tanpa batas! Temukan kelezatan dari setiap sudut dunia di sini. Pilihlah dengan bebas dari daftar menu kami yang beragam, dan nikmati pengalaman kuliner yang tak terlupakan. Setiap hidangan adalah kisah rasa yang menanti untuk ditemukan</h1>
+    </div>
+  </div>
+
   <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
     <div>
-      <h2 class="text-2xl font-bold tracking-tight text-white flex justify-center ">DAFTAR MENU</h2>
+      <h2 class="text-2xl font-bold tracking-tight text-black flex justify-center ">DAFTAR MENU</h2>
     </div>
     <div class='mt-3 flex justify-center gap-x-4 mx-auto'>
       <button class="button2">
         <span class="relative z-10">KERANJANG</span>
       </button>
-      <div class='container p-4 mx-auto bg-white rounded-lg '>
+      <div class='container p-4 mx-auto bg-slate-200 rounded-lg '>
         <div class='flex gap-x-5'>
           <h1 class='font-mono'>Kategori</h1>
           <div class='flex gap-x-5'>
@@ -158,7 +166,7 @@
       </div>
     </div>
   </div>
-  <div class='mt-8 w-[90vw] mx-auto flex flex-wrap bg-yellow-500'>
+  <div class='mt-8 w-[90vw] mx-auto flex flex-wrap '>
     @include("layout.card")
   </div>
   {{-- <div class="container px-8 mx-auto max-w-96 mb-10 ">

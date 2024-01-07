@@ -19,8 +19,14 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('pages/admin');
 });
+Route::get('/admin', function () {
+    return view('pages/admin');
+});
 Route::get('/login', function () {
     return view('pages/login');
+});
+Route::get('/register', function () {
+    return view('pages/register');
 });
 Route::get('/register', function () {
     return view('pages/register');
@@ -35,7 +41,12 @@ Route::get('/payment', function () {
 Route::get('/delivery', function () {
     return view('pages/delivery');
 });
-
-Route::get('/profile', function () {
-    return view('pages/profile');
+Route::get('/delivery2', function () {
+    return view('pages/delivery2');
 });
+Route::post('/pesan',[TransaksiController::class,'pesan']);
+Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
+
+// Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
+
+// Route::put('/transaksi/{id}', [TransaksiController::class, 'update'])->name('transaksi.update');
