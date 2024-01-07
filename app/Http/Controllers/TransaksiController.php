@@ -32,7 +32,7 @@ class TransaksiController extends Controller
     public function simpan_alamat(Request $request)
     {
         $transaksi = DB::table('transaksis')->where('id_user','1')->update(['alamat_tujuan'=>$request->alamat_tujuan,'catatan'=>$request->catatan,'no_telp'=>$request->no_telp]);
-        
+        return redirect()->route('cart');
         // $request->validate([
         //     'alamat_tujuan' => 'required',
         //     'catatan' => 'nullable',
@@ -47,6 +47,7 @@ class TransaksiController extends Controller
     }
     public function simpanpembayaran(Request $request){
         $transaksi = DB::table('transaksis')->where('id_user','1')->update(['kode_promo'=>$request->kode_promo,'pembayaran'=>$request->pembayaran,'status'=>$request->status,'jumlah_pesanan'=>$request->custom_number]);
+        return redirect()->route('cart');
     }
     public function hapus(Request $request){
         // $transaksi = DB::table('transaksis')->where('id_user','1')->delete();
@@ -55,5 +56,6 @@ class TransaksiController extends Controller
         ->where('id_user', '1')
         ->where('id_transaksi', $idTransaksi)
         ->delete();
+        return redirect()->route('cart');
     }
 }
