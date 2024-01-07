@@ -28,7 +28,7 @@ Route::get('/register', function () {
 Route::get('/register', function () {
     return view('pages/register');
 });
-Route::get('/menu', [MenuController::class,'index']);
+Route::get('/menu', [MenuController::class,'index'])->name("menu");
 
 Route::get('/cart', [TransaksiController::class,'index']);
 
@@ -46,6 +46,8 @@ Route::get('/profile', function () {
 });
 Route::post('/pesan',[TransaksiController::class,'pesan']);
 Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
+Route::post('/simpanpembayaran',[TransaksiController::class,'simpanpembayaran']);
+Route::post('/hapus',[TransaksiController::class,'hapus']);
 
 // Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
 

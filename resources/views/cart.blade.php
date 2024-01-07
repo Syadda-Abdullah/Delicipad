@@ -33,7 +33,7 @@
 </div>
 </nav>
 
-<div class=''>
+{{-- <div class=''>
   <div class='container mt-10 px-8 mx-auto max-w-xl rounded-lg shadow-lg p-10 bg-white min-h-60'>
     <h1 class='flex justify-center mb-10'>SET YOUR LOCATION</h1>
     <div class='flex'>
@@ -72,35 +72,41 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 
-<div class='flex items-center justify-center space-x-8 w-screen min-h-screen -mt-20'>
+<div class='flex items-center justify-center space-x-8 w-screen min-h-screen '>
+  
   <div class=''>
     @forelse ($data as $item)
-      <div class="container mt-5 px-8 mx-auto max-w-96 mb-10 rounded-lg shadow-lg p-10 bg-white min-h-60">
-          <img src="img/rendang2.jfif" alt="rendang" class="max-w-28 rounded-lg shadow-sm">
+      <div class="container mt-10 px-8 mx-auto max-w-96 mb-10 rounded-lg shadow-lg p-10 bg-white min-h-60">
+          <img src="img/{{$item->foto}}" alt="rendang" class="max-w-28 rounded-lg shadow-sm">
           <div class="flex">
-              <button class="max-w-28 max-h-10 rounded-full mt-4 text-red hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border border-red-500 bg-white px-3 text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
+            <form action="/hapus" method="post">
+              @csrf
+              <input type="hidden" name='id_transaksi' value="{{$item->id_transaksi}}">
+              <button name='hapus' class="max-w-28 max-h-10 rounded-full mt-4 text-red hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border border-red-500 bg-white px-3 text-red-500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-500 before:transition-all before:duration-500 hover:text-white hover:shadow-red-500 hover:before:left-0 hover:before:w-full">
                   <span class="relative z-10">CANCEL</span></button>
-              <div class="flex flex-col  ml-8 -mt-28">
-                  <h1 class='font-bold '>Rendang</h1>
-                  <p>RP.10,000</p>
-                  <h3 class="font-bold">Total </h3>
+              <div class="flex flex-col  ml-36 -mt-36 ">
+                  <h1 class='font-bold '>{{$item->nama_menu}}</h1>
+                  <p>{{$item->harga}}</p>
+                  {{-- <h1>{{$item['id_menu']}}</h1> --}}
+                  {{-- <h3 class="font-bold">Total </h3>
                   <p>Rp.40,0000</p>
                   <div class="custom-number-input h-10 w-32">
-                      <label for="custom-input-number" class="mt-5 w-full text-gray-700 text-sm font-semibold">Jumlah pesanan
+                      <label for="custom_number" class="mt-5 w-full text-gray-700 text-sm font-semibold">Jumlah pesanan
                       </label>
                       <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-2">
                       <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
                           <span class="m-auto text-2xl font-thin">−</span>
                       </button>
-                      <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                      <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom_number" value="1">
                       <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
                       <span class="m-auto text-2xl font-thin">+</span>
                       </button>
                       </div>
-                  </div>
+                  </div> --}}
               </div>
+            </form>
           </div>
       </div>
       @empty
@@ -111,66 +117,74 @@
   
   <div class='flex-[0.3]'>
       <div class="container mt-10 px-8 mx-auto max-w-96 mb-10 rounded-lg shadow-lg p-10 bg-white min-h-60 " >
+        <form action="/simpanpembayaran" method="post">
+          @csrf
           <div class="mb-4">
-            <div class="relative h-10 w-full min-w-[200px]">
-              <input
-                class="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                placeholder=" "
-              />
-              <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-teal-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-teal-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-teal-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                Kode Promo
-              </label>
-            </div>
-          </div>
-          <div class='grid'>
-              <h3 class='font-bold mb-8 mt-3'> Metode </h3>
-                <div class='relative'>
-                  <div class= 'absolute -top-16 right-0'>
-                    {{-- option pembayaran --}}
-                    <div class='flex items-center justify-center'>
-                      <select
-                                class="shadow-lg outline-none focus:outline-none p-2 bg-white rounded-3xl"
-                                value={selectedValue}
-                                onChange={handleSelectChange}
-                              >
-                                {genre.map((item, i) => (
-                                  <option value={item} key={i}>
-                                      Pembayaran 
-                                  </option>
-                                  <option value={item} key={i}>
-                                      Go Pay
-                                  </option>
-                                  <option value={item} key={i}>
-                                      Ovo 
-                                  </option>
-                                  <option value={item} key={i}>
-                                      COD
-                                  </option>
-                                  <option value={item} key={i}>
-                                      M-Banking
-                                  </option>
-                                ))}
-                              </select>
-                      
-                      </div>
-                  </div>
-                </div>
-              <div class='grid'>
-                <h3 class='font-bold '> Pengiriman </h3>
-                <div class='relative'>
-                  <div class='absolute -top-6 right-0'>
-                    <p> Rp.50,000</p>
-                  </div>
-  
-                </div>
-                <h3 class='font-bold mt-6'> Total </h3>
+              <div class="relative h-10 w-full min-w-[200px]">
+                <input
+                  class="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  placeholder=" " 
+                  value="" name='kode_promo'
+                />
+                <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-teal-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-teal-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-teal-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                  Kode Promo
+                </label>
+                {{-- <input type="time" name='tgl_transaksi' value=""> --}}
               </div>
-          </div>
-          <div class= 'flex mt-10 justify-center l'>
-            <button class="button_beli">
-              <span class="relative z-10">BELI</span>
-            </button>
-          </div>
+            </div>
+            <div class='grid'>
+                <h3 class='font-bold mb-8 mt-3'> Metode </h3>
+                  <div class='relative'>
+                    <div class= 'absolute -top-16 right-0'>
+                      {{-- option pembayaran --}}
+                      <div class='flex items-center justify-center'>
+                        <select
+                                  class="shadow-lg outline-none focus:outline-none p-2 bg-white rounded-3xl"
+                                  value={selectedValue}
+                                  onChange={handleSelectChange}
+                                  name='pembayaran'
+                                >
+                                  
+                                    <option value='pembayaran' key={i}>
+                                        Pembayaran 
+                                    </option>
+                                    <option value='Qris' key=''>
+                                        Qris
+                                    </option>
+                                    <option value='Ovo' key=''>
+                                        Ovo 
+                                    </option>
+                                    <option value='COD' key=''>
+                                        COD
+                                    </option>
+                                    <option value='M-Banking' key=''>
+                                        M-Banking
+                                    </option>
+                                  
+                                </select>
+                        
+                        </div>
+                    </div>
+                  </div>
+                <div class='grid'>
+                  <h3 class='font-bold '> Pengiriman </h3>
+                  <div class='relative'>
+                    <div class='absolute -top-6 right-0'>
+                      <p> Rp.10,000</p>
+                    </div>
+                    
+                  </div>
+                  <h3 class='font-bold mt-6'> Total </h3>
+                  <input type="hidden" value="y" name='status'>
+                  
+                </div>
+            </div>
+            <div class= 'flex mt-10 justify-center l'>
+              <button class="button_beli" type='submit'>
+                <span class="relative z-10">BELI</span>
+              </button>
+            </div>
+        </form>
       </div>
   </div>
 </div>
