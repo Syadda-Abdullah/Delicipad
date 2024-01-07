@@ -35,3 +35,7 @@ Route::get('/payment', function () {
 Route::get('/delivery', function () {
     return view('pages/delivery');
 });
+
+Route::get('/profile', function () {
+    return view('pages/profile');
+});
