@@ -44,6 +44,9 @@ Route::get('/delivery', function () {
 Route::get('/delivery2', function () {
     return view('pages/delivery2');
 });
+Route::get('/profile', function () {
+    return view('pages/profile');
+});
 Route::post('/pesan',[TransaksiController::class,'pesan']);
 Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
 
