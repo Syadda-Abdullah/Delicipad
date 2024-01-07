@@ -13,29 +13,33 @@ use App\Http\Controllers\TransaksiController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/home');
+});
+Route::get('/admin', function () {
+    return view('pages/admin');
 });
 Route::get('/login', function () {
-    return view('/pages/login');
+    return view('pages/login');
+});
+Route::get('/register', function () {
+    return view('pages/register');
 });
 Route::get('/menu', [MenuController::class,'index']);
 
-Route::get('/coba', function () {
-    return view('coba');
-});
 Route::get('/cart', [TransaksiController::class,'index']);
 
-Route::get('/coba2', function () {
-    return view('coba2');
-});
 Route::get('/payment', function () {
-    return view('payment');
+    return view('pages/payment');
 });
 Route::get('/delivery', function () {
-    return view('delivery');
+    return view('pages/delivery');
 });
-Route::get('/home', function () {
-    return view('home');
+Route::get('/delivery2', function () {
+    return view('pages/delivery2');
 });
+Route::post('/pesan',[TransaksiController::class,'pesan']);
+
+Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
+
+Route::put('/transaksi/{id}', [TransaksiController::class, 'update'])->name('transaksi.update');

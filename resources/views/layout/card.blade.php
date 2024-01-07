@@ -1,7 +1,7 @@
 
 @forelse ($data as $item)
-<div class="container px-8 max-w-96 mb-10  ">
-    <div class= "rounded-lg shadow-lg p-10 bg-white" >
+<div class="container px-8 max-w-96 mb-10  ">      
+  <div class= "rounded-lg shadow-lg p-10 bg-slate-100" >
       <div>
         <img src="img/{{$item['foto']}}" alt="" class="rounded-lg ">
         <h1 class= "font-bold mt-6">{{$item['nama_menu']}}</h1>
@@ -17,8 +17,7 @@
                   <p class="text-gray-700 text-base">{{$item['info']}}</p>
                 </div>
                 <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{$item['jenis_makanan']}}</span>
                 </div>
               </div>
             </div>
@@ -26,11 +25,16 @@
         </div>
         <p class="mt-6">{{$item['deskripsi']}}.</p>
         <h1 class='mt-3 text-right'>{{$item['harga']}}</h1>
-        <div class=" flex justify-center mt-8">
-        <button class="button1" >
+        <form action='/pesan' method='POST' class=" flex justify-center mt-8">
+          @csrf
+          <input type="hidden" value="{{$item['id_menu']}}" name='id_menu'>
+          <input type="hidden" value="1" name='id_user'>
+        <button class="button1" type='submit'>
           <span class="relative z-10">PESAN</span>
         </button>
-        </div>
+      </form>
+       </button>
+      </form>
       </div>
     </div>
   </div>
