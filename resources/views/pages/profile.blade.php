@@ -15,13 +15,11 @@
     </div>
     <div class="grow shrink basis-0 text-black text-[28px] font-medium font-['Roboto'] leading-9">Delicipad</div>
     <div class="bg-white justify-center items-center gap-10 flex">
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Order Food</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Reviews</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Contact/Help</div>
+        <a href='/' class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</a>
+        <a href='/menu' class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</a>
+        <a href='/cart' class="text-black text-base font-normal font-['Roboto'] leading-normal">Cart</a>
+        <a href='/payment' class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</a>
+        <a href='/profile' class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</a>
         <div class="h-9 p-2 rounded-md border border-black border-opacity-10 justify-end items-center gap-1 flex">
             <div class="grow shrink basis-0 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Search in site</div>
             <div class="w-5 h-5 relative" ></div>
@@ -48,12 +46,14 @@
         </div>
         <div class="self-stretch text-white text-base font-normal font-['Roboto'] leading-normal">Welcome back!</div>
     </div>
-    <div class="flex-col justify-start items-start gap-3 inline-flex">
-        <div class="h-12 p-3 rounded-lg border border-white flex-col justify-center items-center flex">
-            <div class="text-white text-base font-medium font-['Roboto'] leading-normal">Log Out</div>
+    <div class="relative flex flex-col justify-end items-end gap-3 inline-flex flex-wrap box-border">
+        <div class="relative h-12 w-full
+        
+        p-3 rounded-lg border border-white flex-col justify-center items-center flex">
+            <a href='logout' class="text-white text-base font-medium font-['Roboto'] leading-normal">Log Out</a>
         </div>
-        <div class="h-12 p-3 bg-black rounded-lg flex-col justify-center items-center flex">
-            <div class="text-white text-base font-medium font-['Roboto'] leading-normal">Edit Profile</div>
+        <div class="relative h-12 w-35 p-3  bg-black rounded-lg flex-col justify-center items-center flex">
+            <a href='edit' class="text-white text-base font-medium font-['Roboto'] leading-normal">Edit Profile</a>
         </div>
     </div>
 </div>
