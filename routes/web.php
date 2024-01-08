@@ -62,6 +62,8 @@ Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
 // Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat'])->name('cart');
 Route::post('/simpanpembayaran',[TransaksiController::class,'simpanpembayaran']);
 Route::post('/hapus',[TransaksiController::class,'hapus']);
+Route::post('/simpan_data',[MenuController::class,'store']);
+Route::post('/hapus_menu', [MenuController::class, 'hapus_menu']);
 
 // Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
 

@@ -6,6 +6,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\menu;
+use Illuminate\Support\Facades\DB;
 
 class MenuController extends Controller
 {
@@ -36,14 +37,36 @@ class MenuController extends Controller
         ]);
         // dd($request->all());
 
-        $image = time() . '.' . $request->foto->extension();
-        $request->foto->storeAs('images', $image, 'public');
+        // $image = time() . '.' . $request->foto->extension();
+        // $request->foto->storeAs('images', $image, 'public');
+        $imageNameWithoutExtension = pathinfo($request->file('foto')->getClientOriginalName(), PATHINFO_FILENAME);
 
-        menu::create([
-            'foto' => '../public/img/' . $image,
+    // Dapatkan ekstensi file gambar
+        $imageExtension = $request->file('foto')->getClientOriginalExtension();
+
+    // Gabungkan nama file dengan ekstensi
+        $imageName = $imageNameWithoutExtension . '.' . $imageExtension;
+
+    // Simpan gambar ke direktori public/img dengan nama file yang sama
+        $request->file('foto')->storeAs('public/img', $imageName);
+
+        $image = $request->file('foto')->store('public/img');
+        $imageName = basename($image);
+
+        DB::table('menus')->insert([
+            'nama_menu' => $request->nama_menu,
+            'jenis_makanan' => $request->jenis_makanan,
+            'deskripsi' => $request->deskripsi,
+            'info' => $request->info,
+            'harga' => $request->harga,
+            'foto' => $imageName, 
         ]);
 
-        menu::create($request->all());
+        // menu::create([
+        //     'foto' => '../public/img/' . $image,
+        // ]);
+
+        // menu::create($request->all());
 
         return redirect()->route('crud_adm')->with('success', 'Menu berhasil ditambahkan!');
     }
@@ -74,10 +97,12 @@ class MenuController extends Controller
         return redirect()->route('menu.index')->with('success', 'Menu berhasil diperbarui!');
     }
 
-    public function destroy(Menu $menu)
-    {
-        $menu->delete();
-
-        return redirect()->route('menu.index')->with('success', 'Menu berhasil dihapus!');
+    public function hapus_menu(Request $request){
+        // $transaksi = DB::table('transaksis')->where('id_user','1')->delete();
+        $idmenu = $request->id_menu;
+        $result = DB::table('menus')
+        ->where('id_menu', $idmenu)
+        ->delete();
+        return redirect()->route('crud_adm');
     }
 }

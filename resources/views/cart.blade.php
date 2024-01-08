@@ -79,7 +79,7 @@
   <div class=''>
     @forelse ($data as $item)
       <div class="container mt-10 px-8 mx-auto max-w-96 mb-10 rounded-lg shadow-lg p-10 bg-white min-h-60">
-          <img src="img/{{$item->foto}}" alt="rendang" class="max-w-28 rounded-lg shadow-sm">
+          <img src="{{ asset('storage/img/' . $item->foto) }}" alt="rendang" class="max-w-28 rounded-lg shadow-sm">
           <div class="flex">
             <form action="/hapus" method="post">
               @csrf

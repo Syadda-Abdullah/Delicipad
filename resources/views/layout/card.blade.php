@@ -1,12 +1,14 @@
 
 @forelse ($data as $item)
-<div class="container px-8 max-w-96 mb-10  ">      
-  <div class= "rounded-lg shadow-lg p-10 bg-slate-100" >
-      <div>
-        <img src="img/{{$item['foto']}}" alt="" class="rounded-lg ">
-        <h1 class= "font-bold mt-6">{{$item['nama_menu']}}</h1>
+<div class="container px-8 max-w-96 mb-10">      
+  <div class= "rounded-lg shadow-lg p-10 bg-slate-200 h-[530px] relative">
+      <div class="h-[450px]">
+        <div class="justify-center flex">
+          <img src="{{ asset('storage/img/' . $item->foto) }}" alt="" class="object-cover justify-center top-0 flex rounded-lg h-[200px] w-[200px]">
+        </div>
+        <h1 class= "font-bold mt-6 pt-1 pb-2">{{$item['nama_menu']}}</h1>
         <div class='relative'>
-          <div class='absolute -top-6 -right-28'>
+          <div class='absolute -top-9 -right-28'>
             <div class="max-w-14 mx-auto cursor-pointer button bg-gray-800 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
               <p class='text-sm'>info</p>
             </div>
@@ -23,7 +25,9 @@
             </div>
           </div>
         </div>
-        <p class="mt-6">{{$item['deskripsi']}}.</p>
+        <div class=" h-[50px]">
+          <p class="mt-6">{{$item['deskripsi']}}.</p>
+        </div>
         <h1 class='mt-3 text-right'>{{$item['harga']}}</h1>
         <form action='/pesan' method='POST' class=" flex justify-center mt-8">
           @csrf

@@ -71,13 +71,19 @@
                                 <td class="py-4 px-6 text-sm text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$item['harga']}}</td>
                                 <td class="py-4 px-6 text-sm text-center font-medium text-gray-900 whitespace-nowrap dark:text-white flex justify-center">
                                     @if ($item->foto)
-                                        <img src="img/{{$item->foto}}" alt="{{$item->foto}}" class="max-w-[80px]">
+                                        <img src="{{ asset('storage/img/' . $item->foto) }}" alt="{{$item->foto}}" class="max-w-[80px]">
                                     @else
                                         No Image
                                     @endif
                                 </td>
                                 <td class="py-4 px-6 text-sm text-center font-medium text-right whitespace-nowrap">
-                                    <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    {{-- @forelse($data as $item) --}}
+                                    <form action="/hapus_menu" method="post">
+                                        @csrf
+                                        
+                                        <input type="hidden" name='id_menu' value="{{$item->id_menu}}">
+                                        <button type="submit" onclick="return confirm('Anda yakin ingin menghapus?')">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                             @empty
