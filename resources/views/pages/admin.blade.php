@@ -31,7 +31,7 @@
 </div>
 
 <!--WELCOME-->
-<div class="w-screen h-[216px] p-[60px] bg-black bg-opacity-60 justify-center items-center gap-[60px] flex">
+<div class="w-screen h-[216px] p-[60px] bg-black bg-opacity-60 justify-center items-center gap-[60px] flex" style="background-image: url('img/section.jpg'); background-size: cover; background-position: center; background-blur: 15px; ">
     <div class="grow shrink basis-0 flex-col justify-start items-center gap-6 inline-flex">
         <div class="w-[520px] text-center text-white text-[40px] font-bold font-roboto leading-[48px]">Delicipad Admin Page</div>
         <div class="w-[520px] text-center text-white text-base font-normal font-roboto leading-normal">Manage your restaurant's menu, transactions, reviews, and settings.</div>
@@ -51,8 +51,8 @@
     </div>
     <div class="grow shrink basis-0 h-[348px] justify-center items-center gap-10 flex">
         <div class="grow shrink basis-0 rounded-md border border-black border-opacity-10 flex-col justify-start items-center inline-flex">
-            <div class="self-stretch h-60 justify-start items-start inline-flex">
-                <div class="w-60 h-60 relative bg-zinc-300 bg-opacity-50">
+            <div class="w-60 h-60 justify-start items-start inline-flex">
+                <div class="w-60 h-60 relative bg-zinc-300 bg-opacity-50" style="background-image: url('img/rendang.jpg'); background-size: cover; background-position: center; background-blur: 15px; ">
                     <div class="w-52 h-4 left-[16px] top-[112px] absolute text-center text-black text-xs font-normal font-roboto leading-none">Nasi Padang</div>
                     <div class="px-2 py-1 left-0 top-0 absolute bg-black bg-opacity-5 rounded-tl-md rounded-br-md flex-col justify-center items-center inline-flex">
                         <div class="text-black text-xs font-medium font-roboto leading-none">Bestseller</div>
@@ -60,8 +60,8 @@
                 </div>
             </div>
             <div class="self-stretch h-[108px] p-3 flex-col justify-start items-start gap-1 flex">
-                <div class="self-stretch text-black text-base font-normal font-roboto leading-normal">Nasi Padang</div>
-                <div class="self-stretch text-black text-xl font-medium font-roboto leading-7">Price: $10</div>
+                <div class="self-stretch text-black text-base font-normal font-roboto leading-normal">Rendang</div>
+                <div class="self-stretch text-black text-xl font-medium font-roboto leading-7">Price: Rp.27.000</div>
                 <div class="self-stretch justify-start items-center gap-2 inline-flex">
                     <div class="w-6 h-6 text-center text-black text-base font-normal font-roboto leading-normal">✏️</div>
                     <div class="w-6 h-6 text-center text-black text-base font-normal font-roboto leading-normal">🗑️</div>
@@ -69,17 +69,17 @@
             </div>
         </div>
         <div class="grow shrink basis-0 rounded-md border border-black border-opacity-10 flex-col justify-start items-center inline-flex">
-            <div class="self-stretch h-60 justify-start items-start inline-flex">
-                <div class="w-60 h-60 relative bg-zinc-300 bg-opacity-50">
+            <div class="w-60 h-60 justify-start items-start inline-flex">
+                <div class="w-60 h-60 relative bg-zinc-300 bg-opacity-50" style="background-image: url('img/nasi.jpg'); background-size: cover; background-position: center; background-blur: 15px; ">
                     <div class="w-52 h-4 left-[16px] top-[112px] absolute text-center text-black text-xs font-normal font-roboto leading-none">Gado-Gado</div>
                     <div class="px-2 py-1 left-0 top-0 absolute bg-black bg-opacity-5 rounded-tl-md rounded-br-md flex-col justify-center items-center inline-flex">
-                        <div class="text-black text-xs font-medium font-roboto leading-none">Vegetarian</div>
+                        <div class="text-black text-xs font-medium font-roboto leading-none">Nasi Padang</div>
                     </div>
                 </div>
             </div>
             <div class="self-stretch h-[108px] p-3 flex-col justify-start items-start gap-1 flex">
-                <div class="self-stretch text-black text-base font-normal font-roboto leading-normal">Gado-Gado</div>
-                <div class="self-stretch text-black text-xl font-medium font-roboto leading-7">Price: $7</div>
+                <div class="self-stretch text-black text-base font-normal font-roboto leading-normal">Nasi Padang</div>
+                <div class="self-stretch text-black text-xl font-medium font-roboto leading-7">Price: Rp.18.000</div>
                 <div class="self-stretch justify-start items-center gap-2 inline-flex">
                     <div class="w-6 h-6 text-center text-black text-base font-normal font-roboto leading-normal">✏️</div>
                     <div class="w-6 h-6 text-center text-black text-base font-normal font-roboto leading-normal">🗑️</div>
@@ -102,8 +102,8 @@
     <div class="grow shrink basis-0 py-5 flex-col justify-center items-center gap-10 inline-flex">
         <div class="self-stretch justify-start items-center gap-10 inline-flex">
             <div class="grow shrink basis-0 h-[196px] p-4 rounded-md border border-black border-opacity-10 justify-center items-start gap-4 flex">
-                <div class="w-[100px] h-[100px] justify-start items-start flex">
-                    <div class="w-[100px] h-[100px] relative bg-zinc-300 bg-opacity-50" ></div>
+                <div class="w-[100px] h-[100px] justify-start items-start flex" >
+                    <div class="w-[100px] h-[100px] relative bg-zinc-300 bg-opacity-50" style="background-image: url('img/about.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
                 <div class="grow shrink basis-0 flex-col justify-start items-start gap-2 inline-flex">
                     <div class="self-stretch text-black text-xl font-medium font-roboto leading-7">Transaction ID</div>
@@ -132,7 +132,7 @@
         <div class="self-stretch justify-start items-center gap-10 inline-flex">
             <div class="grow shrink basis-0 h-[196px] p-4 rounded-md border border-black border-opacity-10 justify-center items-start gap-4 flex">
                 <div class="w-[100px] h-[100px] justify-start items-start flex">
-                    <div class="w-[100px] h-[100px] relative bg-zinc-300 bg-opacity-50" ></div>
+                    <div class="w-[100px] h-[100px] relative bg-zinc-300 bg-opacity-50" style="background-image: url('img/about.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
                 <div class="grow shrink basis-0 flex-col justify-start items-start gap-2 inline-flex">
                     <div class="self-stretch text-black text-xl font-medium font-roboto leading-7">Transaction ID</div>
@@ -235,7 +235,7 @@
         </div>
     </div>
     <div class="grow shrink basis-0 h-[368px] py-5 justify-start items-start flex">
-        <div class="w-[520px] h-[328px] relative bg-zinc-300 bg-opacity-50 rounded-md" ></div>
+        <div class="w-[520px] h-[328px] relative bg-zinc-300 bg-opacity-50 rounded-md" style="background-image: url('img/settings.png'); background-size: cover; background-position: center; background-blur: 15px;"></div>
     </div>
 </div>
     
