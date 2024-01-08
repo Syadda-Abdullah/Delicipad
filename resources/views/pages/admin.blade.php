@@ -44,8 +44,8 @@
         <div class="self-stretch text-black text-[40px] font-bold font-roboto leading-[48px]">Menu Items</div>
         <div class="self-stretch text-black text-base font-normal font-roboto leading-normal">Add, edit, or remove menu items.</div>
         <div class="flex-col justify-start items-start gap-3 flex">
-            <div class="h-12 p-3 bg-black rounded-lg flex-col justify-center items-center flex">
-                <div class="text-white text-base font-medium font-roboto leading-normal">Add New Item</div>
+            <div class="h-12 bg-black rounded-lg flex-col justify-center items-center flex relative">
+                <a href='/crud_adm' class="h-full w-full pl-2 pr-2 text-white text-base font-medium font-['Roboto'] leading-normal flex text-center items-center">Add New Item</a>
             </div>
         </div>
     </div>

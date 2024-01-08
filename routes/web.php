@@ -48,6 +48,8 @@ Route::get('/delivery2', function () {
 Route::get('/profile', function () {
     return view('pages/profile');
 });
+Route::get('/crud_adm', [MenuController::class,'crud']);
+
 Route::post('/pesan',[TransaksiController::class,'pesan']);
 Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
 // Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat'])->name('cart');
