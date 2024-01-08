@@ -11,26 +11,27 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <nav>
+      <nav>
+        <!--NAVBAR-->
         <div class="w-screen h-20 p-5 bg-white shadow flex justify-center gap-5 items-center">
             <div class="w-10 h-10 bg-white bg-opacity-10 rounded-[100px]" >
                 <img src="img/delicipad.jpg" alt="">
             </div>
             <div class="grow shrink basis-0 text-black text-[28px] font-medium font-['Roboto'] leading-9">Delicipad</div>
             <div class="bg-white justify-center items-center gap-10 flex">
-                  <a href='/' class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</a>
-                  <a href='/menu' class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</a>
-                  <a href='/cart' class="text-black text-base font-normal font-['Roboto'] leading-normal">Cart</a>
-                  <a href='/payment' class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</a>
-                  <a href='/profile' class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</a>
-                <div class="h-9 p-2 rounded-md border border-black border-opacity-10 justify-end items-center gap-1 flex">
-                    <div class="grow shrink basis-0 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Search in site</div>
-                    <div class="w-5 h-5 relative" ></div>
+                <a href='/' class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</a>
+                <a href='/menu' class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</a>
+                <a href='/cart' class="text-black text-base font-normal font-['Roboto'] leading-normal">Cart</a>
+                <a href='/payment' class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</a>
+                <a href='/profile' class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</a>
+                <div class="relative h-9 rounded-md border border-black border-opacity-30 justify-end items-center gap-1 flex">
+                    <input type='text' placeholder='Search in site' class="pl-2 relative flex w-full h-8 rounded-md text-black border-0 ring-0 outline-0 text-opacity-1 text-sm font-normal font-['Roboto'] leading-tight">
+                    <button type='submit' style="background-image: url('/img/search.png'); background-size: contain; background-position:center; background-repeat:no-repeat;" alt='se' class="relative w-7 h-7 relative z-2 mr-2" ></button>
                 </div>
             </div>
             
         </div>
-        </nav>
+      </nav>
 <div class=''>
     <div>
         <div class='w-screen h-60 bg-gray-500 relative'>
@@ -59,7 +60,7 @@
                     <div class="flex w-72 flex-col gap-6">
                       <div class="relative h-11 w-full min-w-[200px]">
                         <input
-                          placeholder="Jln.Ph,mustofa no67 , rt03/04 ,Bandung"
+                          placeholder="Lokasi Alamat"
                           class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                           value="" name="alamat_tujuan"/>
                         <label class="after:content[' '] pointer-events-none absolute left-0 -top-2.5 flex h-full w-full select-none text-sm font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:leading-tight peer-placeholder-shown:text-blue-gray-500 peer-focus:text-sm peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
@@ -69,7 +70,7 @@
                       <div class="relative h-11 w-full min-w-[200px]">
                         <input
                           class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                          placeholder=" "
+                          placeholder=""
                           value="" name='catatan'
                         />
                         <label class="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">

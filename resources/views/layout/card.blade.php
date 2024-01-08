@@ -19,7 +19,7 @@
                   <p class="text-gray-700 text-base">{{$item['info']}}</p>
                 </div>
                 <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{$item['jenis_makanan']}}</span>
+                  <span class="-mt-5 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{$item['jenis_makanan']}}</span>
                 </div>
               </div>
             </div>
@@ -50,7 +50,7 @@
 
   .object{
     width: 300px;
-    height: 300px;
+    height: 360px;
     opacity: 0;
     background: white;
     border-radius: 5%;
