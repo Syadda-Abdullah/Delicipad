@@ -32,7 +32,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'showRegisterForm']);
 Route::post('/register', [AuthController::class, 'register']);
 
-Route::get('/menu', [MenuController::class,'index']);
+Route::get('/menu', [MenuController::class,'index'])->name('menu');
 
 Route::get('/cart', [TransaksiController::class,'index'])->name('cart');
 
@@ -48,13 +48,17 @@ Route::get('/delivery2', function () {
 Route::get('/profile', function () {
     return view('pages/profile');
 });
-Route::get('/crud_adm', [MenuController::class,'crud']);
+Route::get('/create', function () {
+    return view('pages/create');
+});
+Route::get('/crud_adm', [MenuController::class,'crud'])->name('crud_adm');
 
 Route::post('/pesan',[TransaksiController::class,'pesan']);
 Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat']);
 // Route::post('/simpanalamat',[TransaksiController::class,'simpan_alamat'])->name('cart');
 Route::post('/simpanpembayaran',[TransaksiController::class,'simpanpembayaran']);
 Route::post('/hapus',[TransaksiController::class,'hapus']);
+Route::post('/simpan_data',[MenuController::class,'store']);
 
 // Route::put('/update-transaksi/{id}', 'TransaksiController@update')->name('update.transaksi');
 

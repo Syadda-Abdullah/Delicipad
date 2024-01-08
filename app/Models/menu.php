@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class menu extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $fillable = [
         'id_menu',
         'nama_menu',

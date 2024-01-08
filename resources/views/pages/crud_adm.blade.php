@@ -69,9 +69,9 @@
                                 <td class="py-4 px-6 text-sm text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$item['deskripsi']}}</td>
                                 <td class="py-4 px-6 text-sm text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$item['info']}}</td>
                                 <td class="py-4 px-6 text-sm text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$item['harga']}}</td>
-                                <td class="py-4 px-6 text-sm text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <td class="py-4 px-6 text-sm text-center font-medium text-gray-900 whitespace-nowrap dark:text-white flex justify-center">
                                     @if ($item->foto)
-                                        <img src="asset('')/img/{{$item->foto}}" alt="gambar produk">
+                                        <img src="img/{{$item->foto}}" alt="{{$item->foto}}" class="max-w-[80px]">
                                     @else
                                         No Image
                                     @endif
@@ -90,7 +90,7 @@
         </div>
     </div>
     <div class="mt-[10px] w-[150px] h-[50px] bg-gray-700 justify-center align-center text-center items-center flex rounded-md border border-1 border-black">
-        <button type="submit" class="w-full h-full text-white text-[18px] font-medium font-['Roboto']">Tambah Data</button>
+        <a href="/create" class="w-full h-full text-white text-[18px] font-medium font-['Roboto'] flex items-center justify-center">Tambah Data</a>
     </div>
     </div>
 </body>

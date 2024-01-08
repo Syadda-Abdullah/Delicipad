@@ -28,23 +28,24 @@ class MenuController extends Controller
     {
         $request->validate([
             'nama_menu' => 'required|string|max:255',
-            'jenis_menu' => 'required|string',
+            'jenis_makanan' => 'required|string',
             'deskripsi' => 'required|string',
             'info' => 'required|string',
             'harga' => 'required|integer',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Sesuaikan dengan jenis data yang benar
         ]);
+        // dd($request->all());
 
-        $image = time() . '.' . $request->image->extension();
-        $request->image->storeAs('images', $image, 'public');
+        $image = time() . '.' . $request->foto->extension();
+        $request->foto->storeAs('images', $image, 'public');
 
         menu::create([
             'foto' => '../public/img/' . $image,
         ]);
 
-        Menu::create($request->all());
+        menu::create($request->all());
 
-        return redirect()->route('menu.index')->with('success', 'Menu berhasil ditambahkan!');
+        return redirect()->route('crud_adm')->with('success', 'Menu berhasil ditambahkan!');
     }
 
     public function show(Menu $menu)
