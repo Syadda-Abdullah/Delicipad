@@ -58,4 +58,12 @@ class TransaksiController extends Controller
         ->delete();
         return redirect()->route('cart');
     }
+    public function crud(){
+        $data = transaksi::all();
+        return view('pages.crud_transaksi',compact('data'));
+    }
+    public function update_data(Request $request){
+        $transaksi = DB::table('transaksis')->where(['id_transaksi'=>$request->id_transaksi])->update(['id_user'=>$request->id_user,'id_menu'=>$request->id_menu,'alamat_tujuan'=>$request->alamat_tujuan,'kode_promo'=>$request->kode_promo,'no_telp'=>$request->no_telp,'catatan'=>$request->catatan,'status'=>$request->status]);
+        return redirect()->route('crud_transaksi');
+    }
 }

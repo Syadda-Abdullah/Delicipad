@@ -53,7 +53,7 @@
               <img src="img/34.jpg" alt="" class=' max-w-48 rounded-l-full rounded-r-lg border-r-8 mr-5'>
               <div class='flex flex-col'>
                 
-                <form action="/simpanalamat" method="post">>
+                <form action="/simpanalamat" method="post">
                     @csrf
                     {{-- @method('PUT') --}}
                     <div class="flex w-72 flex-col gap-6">
