@@ -51,7 +51,10 @@ Route::get('/update_transaksi', function () {
 Route::get('/profile', function () {
     return view('pages/profile');
 });
-Route::get('/crud_adm', [MenuController::class,'crud']);
+Route::get('/create', function () {
+    return view('pages/create');
+});
+Route::get('/crud_adm', [MenuController::class,'crud'])->name('crud_adm');
 Route::get('/crud_transaksi', [TransaksiController::class,'crud'])->name('crud_transaksi');
 
 Route::post('/updatedata', [TransaksiController::class,'update_data']);

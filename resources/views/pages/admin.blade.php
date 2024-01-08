@@ -95,7 +95,7 @@
         <div class="self-stretch text-black text-[40px] font-bold font-roboto leading-[48px]">Purchase Transactions</div>
         <div class="flex-col justify-start items-start gap-3 flex">
             <div class="p-3 bg-black rounded-lg flex-col justify-center items-center flex">
-                <div class="text-white text-base font-medium font-roboto leading-normal">View All Transactions</div>
+                <a href="crud_transaksi" class="text-white text-base font-medium font-roboto leading-normal">View All Transactions</a>
             </div>
         </div>
     </div>
