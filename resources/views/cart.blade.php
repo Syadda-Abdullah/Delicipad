@@ -17,7 +17,7 @@
     <div class="w-10 h-10 bg-white bg-opacity-10 rounded-[100px]" >
         <img src="img/delicipad.jpg" alt="">
     </div>
-    <div class="grow shrink basis-0 text-black text-[28px] font-medium font-['Roboto'] leading-9">Delicipad</div>
+    <div class="grow shrink basis-0 text-black text-[28px] font-medium font-roboto leading-9">Delicipad</div>
     <div class="bg-white justify-center items-center gap-10 flex">
         <a href='/' class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</a>
         <a href='/menu' class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</a>

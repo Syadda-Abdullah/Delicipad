@@ -18,15 +18,15 @@
             </div>
             <div class="grow shrink basis-0 text-black text-[28px] font-medium font-['Roboto'] leading-9">Delicipad</div>
             <div class="bg-white justify-center items-center gap-10 flex">
-              <a href='/' class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</a>
-              <a href='/menu' class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</a>
-              <a href='/cart' class="text-black text-base font-normal font-['Roboto'] leading-normal">Cart</a>
-              <a href='/payment' class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</a>
-              <a href='/profile' class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</a>
-              <div class="relative h-9 rounded-md border border-black border-opacity-30 justify-end items-center gap-1 flex">
-                <input type='text' placeholder='Search in site' class="pl-2 relative flex w-full h-8 rounded-md text-black border-0 ring-0 outline-0 text-opacity-1 text-sm font-normal font-['Roboto'] leading-tight">
-                <button type='submit' style="background-image: url('/img/search.png'); background-size: contain; background-position:center; background-repeat:no-repeat;" alt='se' class="relative w-7 h-7 relative z-2 mr-2" ></button>
-              </div>
+                  <a href='/' class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</a>
+                  <a href='/menu' class="text-black text-base font-normal font-['Roboto'] leading-normal">Menu</a>
+                  <a href='/cart' class="text-black text-base font-normal font-['Roboto'] leading-normal">Cart</a>
+                  <a href='/payment' class="text-black text-base font-normal font-['Roboto'] leading-normal">Delivery</a>
+                  <a href='/profile' class="text-black text-base font-normal font-['Roboto'] leading-normal">Account</a>
+                <div class="h-9 p-2 rounded-md border border-black border-opacity-10 justify-end items-center gap-1 flex">
+                    <div class="grow shrink basis-0 text-black text-opacity-50 text-sm font-normal font-['Roboto'] leading-tight">Search in site</div>
+                    <div class="w-5 h-5 relative" ></div>
+                </div>
             </div>
             
         </div>

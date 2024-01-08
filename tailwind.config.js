@@ -6,7 +6,14 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+        extend: {
+          fontFamily: {
+            'roboto': ['Roboto', 'sans-serif'],
+          },
+        },
+
+  // Konfigurasi lainnya
+
   },
   plugins: [
     //require('@tailwindcss/aspect-ratio'),

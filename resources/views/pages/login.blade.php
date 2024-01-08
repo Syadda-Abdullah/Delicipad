@@ -14,10 +14,10 @@
     <div class="w-10 h-10 bg-white bg-opacity-10 rounded-[100px]" >
         <img src="img/delicipad.jpg" alt="">
     </div>
-    <div class="grow shrink basis-0 text-black text-[28px] font-medium font-['Roboto'] leading-9">Delicipad</div>
+    <div class="grow shrink basis-0 text-black text-[28px] font-medium font-roboto leading-9">Delicipad</div>
     <div class="bg-white justify-center items-center gap-10 flex">
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Home</div>
-        <div class="text-black text-base font-normal font-['Roboto'] leading-normal">Contact/Help</div>
+        <a href='/' class="text-black text-base font-normal font-roboto leading-normal">Home</a>
+        <a href='/profile' class="text-black text-base font-normal font-roboto leading-normal">Account</a>
     </div>
     
 </div> 
@@ -32,7 +32,8 @@
                 <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-6 h-6" alt=""> <span>Login with Google</span>
             </button>
         </div>
-        <form action="" class="my-10">
+        <form action="{{ url('/login')}}" method="post" class="my-10">
+            @csrf
             <div class="flex flex-col space-y-5">
                 <label for="email">
                     <p class="font-medium text-slate-700 pb-2">Email address</p>
@@ -53,13 +54,16 @@
                         <a href="#" class="font-medium text-indigo-600">Forgot Password?</a>
                     </div>
                 </div>
-                <button class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+                <button type="submit" class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
                       </svg>
                       <span>Login</span>
                 </button>
                 <p class="text-center">Not registered yet? <a href="/register" class="text-indigo-600 font-medium inline-flex space-x-1 items-center"><span>Register now </span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg></span></a></p>
+                <p class="text-center">Admin? <a href="/adminlogin" class="text-indigo-600 font-medium inline-flex space-x-1 items-center"><span>login </span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg></span></a></p>
             </div>
@@ -69,8 +73,8 @@
 <!--FOOTER-->
 <div class="w-screen h-[220px] p-[60px] justify-center items-center gap-[60px] inline-flex">
     <div class="w-[733px] justify-center items-center gap-[60px] flex">
-        <div class="w-[416px] self-stretch text-center text-black text-xl font-normal font-['Roboto'] leading-7">© 2021 Delicipad. All rights reserved.</div>
-        <div class="w-[257px] self-stretch text-center text-black text-xl font-normal font-['Roboto'] leading-7">Terms of Use | Privacy Policy</div>
+        <div class="w-[416px] self-stretch text-center text-black text-xl font-normal font-roboto leading-7">© 2021 Delicipad. All rights reserved.</div>
+        <div class="w-[257px] self-stretch text-center text-black text-xl font-normal font-roboto leading-7">Terms of Use | Privacy Policy</div>
     </div>
 </div>
 

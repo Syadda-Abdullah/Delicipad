@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,19 +18,21 @@ use App\Http\Controllers\TransaksiController;
 Route::get('/', function () {
     return view('pages/home');
 });
+
+Route::get('/adminlogin', [AdminController::class, 'showAdminLoginForm']);
+Route::post('/adminlogin', [AdminController::class, 'adminlogin']);
+
 Route::get('/admin', function () {
     return view('pages/admin');
 });
-Route::get('/login', function () {
-    return view('pages/login');
-});
-Route::get('/register', function () {
-    return view('pages/register');
-});
-Route::get('/register', function () {
-    return view('pages/register');
-});
-Route::get('/menu', [MenuController::class,'index'])->name("menu");
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/register', [AuthController::class, 'showRegisterForm']);
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/menu', [MenuController::class,'index']);
 
 Route::get('/cart', [TransaksiController::class,'index'])->name('cart');
 
